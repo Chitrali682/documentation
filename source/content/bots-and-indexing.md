@@ -20,7 +20,7 @@ Bots don't browse like humans. Analyzing access patterns in the nginx log is one
 
 ### Rapid Fire Requests/Duplicates
 
-In the log snippet below, there are multiple requests coming in for the same path in rapid fire succession. The time stamp reflects 5 identical requests at the same millisecond. You should investigate these requests.
+In the log snippet below, there are multiple requests coming in for the same path in rapid-fire succession. The time stamp reflects 5 identical requests at the same millisecond. You should investigate these requests.
 
 ```none
 127.0.0.1 - - [11/Nov/2013:19:05:24 +0000] "POST /index.php?q=comment/reply/545 HTTP/1.0" 500 588 "http://www.mywebsite.com/node/545?page=399" "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; MRA 4.3 (build 51720))" 0.848 "195.200.54.200, 10.200.200.21, ::ffff:127.0.0.1,::ffff:127.0.0.1"
@@ -53,8 +53,6 @@ While Drupal and WordPress both generate their own `robots.txt` file by default,
 ```none:title=robots.txt
 # Pantheon's documentation on robots.txt: https://docs.pantheon.io/bots-and-indexing/
 User-agent: *
-Disallow: /
-
 User-agent: RavenCrawler
 User-agent: rogerbot
 User-agent: dotbot
